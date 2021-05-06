@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.3)
+  - InputMask (6.1.0)
+  - KeychainAccess (4.2.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - InputMask
+  - KeychainAccess
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - InputMask
+    - KeychainAccess
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  InputMask: 71d291dc54d2deaeac6512afb6ec2304228c0bb7
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+
+PODFILE CHECKSUM: f1cb181ada411fdb4fa8c486c61b3e6eae784c25
+
+COCOAPODS: 1.10.1
