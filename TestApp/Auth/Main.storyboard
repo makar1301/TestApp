@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="width" secondItem="hiv-M3-fMK" secondAttribute="height" multiplier="1:1" id="3wT-4M-fBH"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpM-zo-Hr8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bpM-zo-Hr8">
                                 <rect key="frame" x="30" y="374" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="P4q-9g-obP"/>
@@ -33,7 +33,7 @@
                                     <outlet property="delegate" destination="P95-km-334" id="sZN-DQ-bX2"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvY-A6-Fe3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vvY-A6-Fe3">
                                 <rect key="frame" x="30" y="459" width="354" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="GMn-el-Ta1"/>
