@@ -10,7 +10,7 @@ import UIKit
 class DevExamTableViewCell: UITableViewCell {
     
     static let cellIdentifare = "DevExamTableViewCell"
-
+    
     // MARK: - @IBOutlets
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -22,20 +22,20 @@ class DevExamTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     
     public func getImage(from string: String) -> UIImage? {
-
+        
         guard let url = URL(string: string)
-            else {
-                print("Unable to create URL")
-                return nil
+        else {
+            print("Unable to create URL")
+            return nil
         }
         if let cachedImage = DevExamInteractor.shared.imageCached.object(forKey: url.absoluteString as NSString) {
             return cachedImage
@@ -43,13 +43,13 @@ class DevExamTableViewCell: UITableViewCell {
         var image: UIImage? = nil
         do {
             let data = try Data(contentsOf: url, options: [])
-
+            
             image = UIImage(data: data)
-
+            
             if let image = image {
                 DevExamInteractor.shared.imageCached.setObject(image, forKey: url.absoluteString as NSString)
             }
-             else {return nil}
+            else {return nil}
         }
         catch {
             print(error.localizedDescription)
@@ -70,15 +70,19 @@ class DevExamTableViewCell: UITableViewCell {
         let date = newDateFormater.string(from: theDate!)
         
         
+        DispatchQueue.global().async {
+            let string = "http://dev-exam.l-tech.ru\(item.image)"
+            let image = self.getImage(from: string)!
+    
         DispatchQueue.main.async {
-        let string = "http://dev-exam.l-tech.ru\(item.image)"
-            let image = self.getImage(from: string)
-        self.mainImage.image = image
+            
+            self.mainImage.image = image
+        }
         }
         self.dateLabel.text = "\(date)"
         self.detailLabel.text = item.text
         self.titleLabel.text = item.title
-
+        
         
     }
 }

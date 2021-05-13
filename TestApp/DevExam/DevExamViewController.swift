@@ -26,11 +26,11 @@ class DevExamViewController: UIViewController {
     private var interactor: DevExamBusinessLogic?
     private var tableData = [News]()
     
-
     
     
     
-  
+    
+    
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -87,7 +87,7 @@ class DevExamViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.separatorStyle = .none
     }
-
+    
     private func setupTimer() {
         Timer.scheduledTimer(withTimeInterval: 120.0, repeats: true) { (timer) in
             self.interactor?.fetchNews()
@@ -95,15 +95,15 @@ class DevExamViewController: UIViewController {
             print("Данные обновлены")
         }
     }
-
-   
-
+    
+    
+    
 }
 
 // MARK: - Display logic
 
 extension DevExamViewController: DevExamDisplayLogic {
-
+    
     func displayData(data: [News]) {
         tableData.removeAll()
         tableData = data
